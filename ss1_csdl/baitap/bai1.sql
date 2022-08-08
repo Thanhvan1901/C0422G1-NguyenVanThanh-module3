@@ -20,7 +20,7 @@ CREATE TABLE teacher (
     country VARCHAR(55),
     PRIMARY KEY (id_teacher)
 ); 
-insert into teacteacherher(name_teacher,age,country) values ("Nhân","45","Đà Nẵng"),
+insert into teacher(name_teacher,age,country) values ("Nhân","45","Đà Nẵng"),
 ("Hoàng","40","Huế");
 select * from teacher;
 
