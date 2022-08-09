@@ -24,6 +24,7 @@ CREATE TABLE Chi_tiet_phieu_xuat (
     so_luon_xuat INT,
     so_px INT,
     ma_vt INT,
+    PRIMARY KEY (so_px , ma_vt),
     FOREIGN KEY (so_px)
         REFERENCES phieu_xuat (so_px),
     FOREIGN KEY (ma_vt)
@@ -35,6 +36,7 @@ CREATE TABLE chi_tiet_phieu_nhap (
     so_luong_nhap INT,
     ma_vt INT,
     so_pn INT,
+    PRIMARY KEY (ma_vt , so_pn),
     FOREIGN KEY (ma_vt)
         REFERENCES vat_tu (ma_vt),
     FOREIGN KEY (so_pn)
@@ -49,6 +51,7 @@ CREATE TABLE don_dat_hang (
 CREATE TABLE chi_tiet_don_hang (
     ma_vt INT,
     so_dh INT,
+    PRIMARY KEY (ma_vt , so_dh),
     FOREIGN KEY (ma_vt)
         REFERENCES vat_tu (ma_vt),
     FOREIGN KEY (so_dh)
@@ -71,8 +74,9 @@ CREATE TABLE nha_cc (
 CREATE TABLE cung_cap (
     ma_ncc INT,
     so_dh INT,
+    PRIMARY KEY (ma_ncc , so_dh),
     FOREIGN KEY (ma_ncc)
         REFERENCES nha_cc (ma_ncc),
     FOREIGN KEY (so_dh)
-        REFERENCES chi_tiet_don_hang (so_dh)
+        REFERENCES don_dat_hang (so_dh)
 );
