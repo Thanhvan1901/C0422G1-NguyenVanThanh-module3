@@ -24,5 +24,47 @@ VALUES(1, 1, 3),
       (3, 1, 8),
 	  (2, 5, 4),
       (2, 3, 3);
+      SELECT 
+    o.oId AS orderId,
+    o.oDate AS orderDate,
+    p.pPrice AS productPrice
+FROM
+    `order` o
+        INNER JOIN
+    product p ON o.oId = p.pId;
+    
+    SELECT 
+    c.cName AS customerName, p.pName AS productName, ord.odQTY as soLuong
+FROM
+    customer c
+        JOIN
+    `order` o ON c.cId = o.cId
+        JOIN
+    orderdetail ord ON o.oId = ord.oId
+        JOIN
+    product p ON ord.pId = p.pId;
+    
+    
+SELECT 
+    c.cName AS customerName
+FROM
+    customer c
+        LEFT JOIN
+    `order` o ON c.cId = o.cId
+WHERE
+    o.cId IS NULL;   
+    SELECT 
+    o.oId AS orderId,
+    o.oDate AS orderDate,
+    ord.odQTY * p.pPrice AS totalPrice
+FROM
+    customer c
+        JOIN
+    `order` o ON c.cId = o.cId
+        JOIN
+    orderdetail ord ON o.oId = ord.oId
+        JOIN
+    product p ON ord.pId = p.pId
+WHERE
+    ord.odQTY * p.pPrice IS NOT NULL;
       
-	select oID , oDate , oTotalPrice from `order`;
