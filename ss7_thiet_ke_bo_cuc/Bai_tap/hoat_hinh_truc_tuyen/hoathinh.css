@@ -181,94 +181,53 @@
     }
 }
 
-nav {
-    height: 60px;
-    width: 100%;
-    box-shadow: 0 0 3px #666666;
-    line-height: 60px;
-    background: #EEEEEE;
+.header{
+    display: flex;
+    top: 0;
+    margin: 100%;
 }
-
-ul li {
-    display: inline-table;
-    font-size: 24px;
+#logo{
+    left: 10px;
 }
-
-#logo {
-    left: 0px;
-    margin-left: 10px;
-}
-
-#home {
+#phimhoathinh{
     text-align: center;
-
+    margin-left: 300px;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 30px;
 }
 
-#home ul li {
-    margin: 5px 40px;
-}
 
-#end {
-    text-align: right;
-    margin-right: 15px;
-}
 
-#end ul li {
-    margin-left: 20px;
-}
-
-ul li #search {
-    position: relative;
-    width: 270px;
-    border: 1px solid #666666;
-    border-radius: 15px;
-    border: 1px solid #666666;
-}
-
-#search i {
-    font-size: 18px;
-    margin: 10px;
-}
-
-#search input {
-    border: none;
-    outline: none;
-}
-
-.container ul li {
-    display: block;
-    height: 60px;
+#menu{
     width: 100%;
+    height: 50px;
+    background: darkgrey;
+    line-height: 50px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
-#left {
-    width: 300px;
+#leftSide{
+    position: sticky;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+}
+
+#menu a{
+    margin: 0 50px;
+}
+
+#left{
     height: 100%;
-    position: fixed;
-    padding-top: 10px;
     overflow: hidden;
-}
+    float: left;
 
-#right {
-    margin-left: 100px;
-    width: 250px;
-    height: 100%;
-    position: fixed;
-    padding-top: 10px;
-    overflow: hidden;
 }
-
-#left:hover {
+#left:hover{
     overflow: scroll;
 }
-
-#left ul li:hover{
-background-color: #EEEEEE;
-}
-
-.status {
-    width: 100%;
-    box-shadow: 0 0 3px #666666;
-
-}
-
