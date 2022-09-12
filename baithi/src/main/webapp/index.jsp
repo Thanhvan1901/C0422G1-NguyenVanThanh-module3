@@ -56,7 +56,7 @@
          alt="">
 
     <div class="container-fluid text-end my-4 me-4">
-        <span class="badge text-bg-warning mt-3">@Copy HTT</span>
+        <span class="badge text-bg-warning mt-3">Huỳnh Trung Thuyên</span>
     </div>
 </div>
 

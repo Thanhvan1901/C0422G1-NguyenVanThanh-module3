@@ -1,5 +1,7 @@
 package currency.controller;
 
+import currency.service.ICurrencyService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,15 +13,18 @@ import javax.jws.WebParam;
 
 @Controller
 public class CurrencyController {
+    @Autowired
+    private ICurrencyService iCurrencyService ;
+
     @GetMapping("")
-    public String index(){
-        return "index" ;
+    public String index() {
+        return "index";
     }
+
     @PostMapping("/result")
-    public String result(@RequestParam String usd , Model model){
-        int result = Integer.parseInt(usd) * 23000 ;
+    public String result(@RequestParam double usd, Model model) {
+        Double result = iCurrencyService.getMoney(usd);
         model.addAttribute("result" , result) ;
-        model.addAttribute("usd" , usd) ;
-        return "result" ;
+        return "result";
     }
 }

@@ -13,7 +13,7 @@
   <body>
   <form action="/result" method="post">
       <label>Nhập USD</label>
-      <input type="text" name="usd" placeholder="USD">
+      <input type="number" name="usd" placeholder="USD">
       <input type="submit" value="Converter">
   </form>
   </body>
